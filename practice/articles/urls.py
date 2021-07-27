@@ -6,6 +6,6 @@ app_name='articles'
 
 urlpatterns = [
   #  path('admin/', admin.site.urls),
-    path(r'',views.article_list),
+    path(r'',views.article_list,name='list'),
     re_path(r'^(?P<slug>[\w-]+)/$', views.article_detail,name='details'),
 ]
