@@ -8,6 +8,19 @@
         <link rel="stylesheet" href="{% static 'styles.css'%}">
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <form class='logout link' action="{% url 'accounts:logout'%}" method='post'>
+                            {%csrf_token%}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        </header>
         <div class="wrapper">
             
             {% block content %}
