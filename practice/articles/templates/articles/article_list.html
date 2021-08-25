@@ -4,10 +4,11 @@
     <p>Welcome to Articles</p>
     <div class="articles">
         {% for art in article %}
-            <div class="arti">
+            <div class="article">
                 <h2><a href="{% url 'articles:details' slug=art.slug %}">{{art.title}}</a></h2>
                 <p>{{art.snippets}}</p>
                 <p>{{art.date}}</p>
+                <p class="author">added by {{art.author}}</p>
             </div>
             
         {% endfor %}
